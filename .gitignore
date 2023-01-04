@@ -1,0 +1,16 @@
+*.class
+*.ear
+*.ipr
+*.iws
+*.jar
+*.log
+*.war
+*.zip
+/.gradle/
+**/*.iml
+**/build/
+**/target/
+**/out/
+**/test/resources/*
+/logback-spring.xml
+/.idea/
