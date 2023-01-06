@@ -50,6 +50,13 @@ class AlarmController(
         }
     }
 
+    @Synchronized
+    fun reset() {
+        isFire = false
+        isSmoke = false
+        isWater = false
+    }
+
     private fun createAlarmMessage(): AlarmMessage {
         return AlarmMessage(
             alarmType = alarmType,

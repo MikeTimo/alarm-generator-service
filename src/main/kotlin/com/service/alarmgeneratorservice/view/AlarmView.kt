@@ -75,6 +75,7 @@ class AlarmView : View() {
                     spacing = 20.px
                     padding = box(5.px)
                 }
+                controller.reset()
                 resetAlarmTypeButton(property)
                 resetAddressProperty(controller)
             })
