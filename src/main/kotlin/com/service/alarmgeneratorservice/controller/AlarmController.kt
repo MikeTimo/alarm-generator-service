@@ -16,7 +16,6 @@ class AlarmController(
 
     var street: String = ""
     var house: Short = 0
-    var alarmType = AlarmType.FIRE
 
     var isSmoke = false
     var isFire = false
@@ -29,9 +28,9 @@ class AlarmController(
             logger.error("not valid message")
             return false
         }
-        val message = codec.encodeMessage(pakAppMessage)
+        val message = codec.encodeMessage(alarmMessage)
         logger.warn("Send message $alarmMessage")
-        outboundDataSink.next(message)
+//        outboundDataSink.next(message)
         return true
     }
 
@@ -59,7 +58,9 @@ class AlarmController(
 
     private fun createAlarmMessage(): AlarmMessage {
         return AlarmMessage(
-            alarmType = alarmType,
+            isSmoke = isSmoke,
+            isFire = isFire,
+            isWater = isWater,
             addressAlarm = AddressAlarm(street, house),
             timestamp = LocalDateTime.now()
         )

@@ -3,7 +3,9 @@ package com.service.alarmgeneratorservice.domain
 import java.time.LocalDateTime
 
 data class AlarmMessage(
-    val alarmType: AlarmType,
+    val isSmoke: Boolean,
+    val isFire: Boolean,
+    val isWater: Boolean,
     val addressAlarm: AddressAlarm,
     val timestamp: LocalDateTime
 )
