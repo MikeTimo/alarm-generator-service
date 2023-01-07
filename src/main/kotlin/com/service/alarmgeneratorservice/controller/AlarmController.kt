@@ -1,6 +1,6 @@
 package com.service.alarmgeneratorservice.controller
 
-import com.service.alarmgeneratorservice.codec.BitBufferCodec
+import com.service.alarmgeneratorservice.codec.BitCodecService
 import com.service.alarmgeneratorservice.domain.AddressAlarm
 import com.service.alarmgeneratorservice.domain.AlarmMessage
 import com.service.alarmgeneratorservice.domain.AlarmType
@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory
 import java.time.LocalDateTime
 
 class AlarmController(
-    private val codec: BitBufferCodec
+    private val codec: BitCodecService
 ) {
 
     private val logger: Logger = LoggerFactory.getLogger(javaClass)

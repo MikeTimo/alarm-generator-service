@@ -1,6 +1,6 @@
 package com.service.alarmgeneratorservice.view
 
-import com.service.alarmgeneratorservice.codec.BitBufferCodec
+import com.service.alarmgeneratorservice.codec.BitCodecService
 import com.service.alarmgeneratorservice.controller.AlarmController
 import com.service.alarmgeneratorservice.domain.AlarmType
 import javafx.application.Platform
@@ -39,7 +39,7 @@ class AlarmView : View() {
             minHeight = 870.px
         }
 
-        val codec = BitBufferCodec()
+        val codec = BitCodecService()
         val controller = AlarmController(codec)
         val observablePlaceSet: ObservableSet<AlarmType> = FXCollections.observableSet(mutableSetOf())
         val property = SimpleSetProperty(observablePlaceSet)
