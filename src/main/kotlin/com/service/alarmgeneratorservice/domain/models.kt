@@ -8,7 +8,9 @@ data class AlarmMessage(
     val isWater: Boolean,
     val addressAlarm: AddressAlarm,
     val timestamp: LocalDateTime
-)
+) {
+    val length = 13
+}
 
 enum class AlarmType(
     val value: Int
