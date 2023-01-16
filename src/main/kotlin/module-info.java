@@ -7,4 +7,7 @@ open module com.service.alarmgeneratorservice {
     requires spring.boot.autoconfigure;
     requires spring.context;
     requires org.slf4j;
+    requires io.netty.codec;
+    requires io.netty.transport;
+    requires io.netty.buffer;
 }
